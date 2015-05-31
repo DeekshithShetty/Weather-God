@@ -14,4 +14,4 @@ A minimalistic weather app for Android.
 
 ##Snapshots
 
- ![alt tag](https://raw.githubusercontent.com/DeekshithShetty/Weather-God/master/Snapshots/snapshot-7.png)
+ ![alt tag](https://raw.githubusercontent.com/DeekshithShetty/Weather-God/master/Snapshots/snapshot-5.png)			![alt tag](https://raw.githubusercontent.com/DeekshithShetty/Weather-God/master/Snapshots/snapshot-6.png)
