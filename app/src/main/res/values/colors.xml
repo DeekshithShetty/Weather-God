@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#FF6600</color>
+    <color name="grey_color">#393939</color>
+
+    <color name="theme_orange">#FA6800</color>
+    <color name="theme_orange_dark">#D95500</color>
+    <color name="theme_blue">#1BA1E2</color>
+    <color name="theme_blue_dark">#0A80D1</color>
+    <color name="theme_green">#42bd41</color>
+    <color name="theme_green_dark">#2BAF2B</color>
+    <color name="theme_purple">#8e44a8</color>
+    <color name="theme_purple_dark">#6A2297</color>
+    <color name="theme_pink">#E61443</color>
+    <color name="theme_pink_dark">#C40221</color>
+    <color name="theme_indigo">#3f51b5</color>
+    <color name="theme_indigo_dark">#1D3093</color>
+    <color name="theme_yellow">#f1c40f</color>
+    <color name="theme_yellow_dark">#D0A20D</color>
+    <color name="theme_red">#d32f2f</color>
+    <color name="theme_red_dark">#A10D0D</color>
+    <color name="theme_grey">#607d8b</color>
+    <color name="theme_grey_dark">#405A69</color>
+
+
+    <color name="primaryColor">#607d8b</color>
+    <color name="primaryColorDark">#444444</color>
+
+
+
+    <color name="light_grey">#C6C6C6</color>
+    <color name="dark_grey">#393939</color>
+
+    <color name="light_background_color">#FFFFFF</color>
+    <color name="light_bright_text_color">#000000</color>
+    <color name="light_medium_text_color">#444444</color>
+
+    <color name="dark_background_color">#000000</color>
+    <color name="dark_bright_text_color">#FFFFFF</color>
+    <color name="dark_medium_text_color">#89ffffff</color>
+</resources>

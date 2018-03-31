@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.saiyanstudio.weathergod.MyLocationsActivity">
+
+    <item
+        android:id="@+id/add_btn"
+        android:title="Add"
+        android:orderInCategory="100"
+        android:icon="@drawable/add_loc"
+        app:showAsAction="always" />
+</menu>

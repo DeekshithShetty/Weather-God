@@ -1,0 +1,330 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawerLayout"
+        android:layout_height="match_parent">
+
+        <!-- activity view -->
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/scrollView"
+                style="@style/Theme.MyLightTheme">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout_main">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="40"
+                                android:paddingLeft="25dp"
+                                android:id="@+id/temperatureLabel"
+                                style= "@style/Theme.MyLightTheme.TempLabel"
+                                android:textSize="150sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/degreeImageView"
+                                android:layout_toRightOf="@+id/temperatureLabel"
+                                android:layout_toEndOf="@+id/temperatureLabel"
+                                android:text="o"
+                                style= "@style/Theme.MyLightTheme.TempLabel"
+                                android:textSize="60sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/degreeGradeLabel"
+                                android:layout_marginRight="20dp"
+                                android:layout_toRightOf="@+id/degreeImageView"
+                                android:layout_toEndOf="@+id/temperatureLabel"
+                                android:text="C"
+                                style= "@style/Theme.MyLightTheme.TempLabel"
+                                android:textSize="150sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout  android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+                            <ImageView
+                                android:layout_marginTop="90dp"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="fill_parent"
+                                android:layout_height="200dp"
+                                android:id="@+id/iconImageView"
+                                android:src="@drawable/cloudy_night" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/linearLayout"
+                                android:layout_marginTop="190dp"
+                                android:layout_marginBottom="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/not_available"
+                                    android:id="@+id/locationLabel"
+                                    style="@style/Theme.MyLightTheme.InfoValue"
+                                    android:textSize="45sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Clear"
+                                    android:id="@+id/summaryLabel"
+                                    android:layout_marginTop="16dp"
+                                    android:textColor="@color/theme_color"
+                                    android:textSize="30sp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/linearLayout2"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_below="@+id/summaryLabel">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="00:00"
+                                        android:id="@+id/localTimeTag"
+                                        android:textSize="20sp"
+                                        style="@style/Theme.MyLightTheme.Infotext" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="RELATIVE HUMIDITY"
+                                        android:textSize="17sp"
+                                        android:id="@+id/humidityLabel"
+                                        style="@style/Theme.MyLightTheme.Infotext"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="@string/not_available"
+                                        android:id="@+id/humidityValue"
+                                        style="@style/Theme.MyLightTheme.InfoValue"
+                                        android:textSize="20sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="CHANCE OF RAIN"
+                                        android:id="@+id/precipLabel"
+                                        android:textSize="17sp"
+                                        style="@style/Theme.MyLightTheme.Infotext" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="@string/not_available"
+                                        android:id="@+id/precipValue"
+                                        style="@style/Theme.MyLightTheme.InfoValue"
+                                        android:textSize="20sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="WIND SPEED IN mPh"
+                                        android:id="@+id/windSpeedLabel"
+                                        android:textSize="17sp"
+                                        style="@style/Theme.MyLightTheme.Infotext" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="@string/not_available"
+                                        android:id="@+id/windSpeedValue"
+                                        style="@style/Theme.MyLightTheme.InfoValue"
+                                        android:textSize="20sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="PRESSURE IN mbar"
+                                        android:id="@+id/pressureLabel"
+                                        android:textSize="17sp"
+                                        style="@style/Theme.MyLightTheme.Infotext" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="@string/not_available"
+                                        android:id="@+id/pressureValue"
+                                        style="@style/Theme.MyLightTheme.InfoValue"
+                                        android:textSize="20sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/chartLabel"
+                        android:text="Temperature Chart"
+                        style="@style/Theme.MyLightTheme.InfoValue"
+                        android:textSize="25sp" />
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="256dp">
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/chart1"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="256dp" />
+
+                    </FrameLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/hourWeatherLabel"
+                        android:text="Hourly Forecast"
+                        style="@style/Theme.MyLightTheme.InfoValue"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/myLinear">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <!-- navigation drawer -->
+        <RelativeLayout
+            android:layout_gravity="left|start"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/nav_header"
+                android:background="#D7D7D7" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/ic_launcher"
+                    android:id="@+id/imageWeatherGod"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="140dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/dark_grey"
+                    android:id="@+id/textWeatherGod"
+                    android:text=""
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/nav_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#FFF"
+                android:background="#fff"
+                android:dividerHeight="1dp" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 # Weather God
 
-##Description
+## Description
 A minimalistic weather app for Android.
 
 <a href="https://play.google.com/store/apps/details?id=com.saiyanstudio.weathergod&hl=en">
@@ -8,7 +8,7 @@ A minimalistic weather app for Android.
        src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
  </a>
 
-##Features
+## Features
 1. Includes Material Design.
 2. Detects user location when GPS is enabled.
 3. User can provide any location of his choice when GPS is disabled.

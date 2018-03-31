@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout"
+    style="@style/Theme.MyLightTheme">
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:id="@+id/thumbnail"
+        android:gravity="right"
+        android:layout_alignParentLeft="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            android:paddingRight="20dp"
+            android:id="@+id/temperatureLabel"
+            style= "@style/Theme.MyLightTheme.TempLabel"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconImageView"
+            android:src="@drawable/cloudy_night" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="00:00"
+        android:id="@+id/localTimeTag"
+        android:textSize="17sp"
+        style="@style/Theme.MyLightTheme.InfoValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:text="Clear"
+        android:layout_below="@+id/localTimeTag"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:id="@+id/summaryLabel"
+        style="@style/NewTheme"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_humidity" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HUMIDITY"
+            android:textSize="13sp"
+            android:id="@+id/humidityLabel"
+            style="@style/Theme.MyLightTheme.Infotext" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="77%"
+            android:id="@+id/humidityValue"
+            style="@style/Theme.MyLightTheme.InfoValue"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout_humidity"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHANCE OF RAIN"
+            android:id="@+id/precipLabel"
+            android:textSize="13sp"
+            style="@style/Theme.MyLightTheme.Infotext" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="20%"
+            android:id="@+id/precipValue"
+            style="@style/Theme.MyLightTheme.InfoValue"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

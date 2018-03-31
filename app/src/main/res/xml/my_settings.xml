@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Theme Settings"
+        >
+        <ListPreference
+            android:key="AppTheme"
+            android:entries="@array/theme"
+            android:defaultValue="dark"
+            android:summary="%s"
+            android:entryValues="@array/theme_values"
+            android:title="Select a theme">
+        </ListPreference>
+
+        <ListPreference
+            android:key="AppThemeColor"
+            android:entries="@array/themeColor"
+            android:defaultValue="orange"
+            android:summary="%s"
+            android:entryValues="@array/themeColor_values"
+            android:title="Select a theme color">
+        </ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Refresh Settings">
+        <CheckBoxPreference
+            android:title="Auto Refresh"
+            android:defaultValue="false"
+            android:key="AutoRefreshState" />
+
+        <ListPreference
+            android:key="RefreshFreq"
+            android:entries="@array/refreshFreq"
+            android:summary="%s"
+            android:defaultValue="30"
+            android:entryValues="@array/refresh_values"
+            android:title="Refresh Frequency">
+        </ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+        <Preference
+            android:title="Saiyan Studio"
+            android:summary="Developer">
+        </Preference>
+
+        <Preference
+            android:title="Forecast.io"
+            android:summary="Data Provider">
+
+        </Preference>
+
+        <Preference
+            android:title="Version"
+            android:summary="v1.0">
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

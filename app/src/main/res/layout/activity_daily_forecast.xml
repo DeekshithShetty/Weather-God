@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/TheLinearLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    tools:context="com.saiyanstudio.weathergod.DailyForecast"
+                    android:background="#FFFFFF"
+                    android:id="@+id/relativeLayout">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="256dp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_below="@+id/lineChart"
+                        android:layout_height="820dp"
+                        android:orientation="vertical"
+                        android:id="@+id/myLinear">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lineChart"
+                        android:layout_marginLeft="80dp"
+                        android:orientation="horizontal">
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/progressBar"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:text="Retrieving data Please wait ..."
+                            android:textSize="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="150dp"
+                            android:id="@+id/progressLabel"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+</LinearLayout>

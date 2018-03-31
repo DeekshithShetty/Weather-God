@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyDarkTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">#000000</item>
+    </style>
+    <style name="Theme.MyDarkTheme.TempLabel" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="Theme.MyDarkTheme.Infotext" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">#80ffffff</item>
+    </style>
+    <style name="Theme.MyDarkTheme.InfoValue" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+
+
+    <style name="Theme.MyLightTheme" parent="Theme.AppCompat.Light">
+
+    </style>
+    <style name="Theme.MyLightTheme.TempLabel" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/light_bright_text_color</item>
+    </style>
+    <style name="Theme.MyLightTheme.Infotext" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/light_medium_text_color</item>
+    </style>
+    <style name="Theme.MyLightTheme.InfoValue" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/light_bright_text_color</item>
+    </style>
+
+
+    <style name="NewTheme">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+
+</resources>
